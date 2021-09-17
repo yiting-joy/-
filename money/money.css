@@ -61,11 +61,6 @@
 
 }
 
-/* .content{
-text-align: center;
-
-} */
-
 
 /* 上傳選擇檔案按鈕 */
 .FileUpBtn{
@@ -128,8 +123,8 @@ text-align: center;
 }
 
 
-.content{
+.container{
     position: absolute;
-    left: 40%;
+    left: 35%;
 }
 
