@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>行事曆示意</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="page1.css">
+</head>
+
+<!-- navbar-expand-md版面小到md自動換成漢堡鈕 -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"><b>EIP系統</b></a>
+    <!-- 縮排成漢堡鈕 -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">工作日誌 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">審核紀錄</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    表單申請
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">申請紀錄查詢</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">請假單</a>
+                    <a class="dropdown-item" href="#">加班單</a>
+                    <a class="dropdown-item" href="#">出差單</a>
+                    <a class="dropdown-item" href="#">經費申請單</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">聯絡資料</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">訂餐系統</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">留言板</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">小遊戲</a>
+            </li>
+        </ul>
+        <!-- <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
+    </div>
+    <div style="color: snow;">現在時間 :</div>
+    <div id="times" style="color: snow;"></div>
+    <div><a class="nav-link" href="#"><b>登出</b></a></div>
+</nav>
+
+
+<body>
+    <div class="container-sm">
+        <div class="">
+            <br>
+            <input type="date" id="gettoday" onchange="gettoday()">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary" id="day_btn" style="background-color:#343a40;"
+                    onclick="showDay()">日</button>
+                <button type="button" class="btn btn-secondary" id="week_btn" onclick="showWeek()">周</button>
+                <button type="button" class="btn btn-secondary" id="mon_btn" onclick="showMonth()">月</button>
+            </div>
+            <br>
+            <br>
+            <table class="table table-striped " id="showDay">
+                <thead class="thead-dark">
+                    <tr class="row">
+                        <th class="col-3">
+                            工作日誌
+                        </th>
+                        <th class="col-3">
+                            代辦事項
+                        </th>
+                        <th class="col-3">
+                            提醒事項
+                        </th>
+                        <th class="col-3">
+                            備註
+                        </th>
+                    </tr>
+                </thead>
+
+                <tr class="row">
+                    <td class="col-3">
+                        需要製作行事曆<br>
+                        需要還小美50元<br>
+                        測試如果打很多字會如何
+                        測試如果打很多字會如何
+                        測試如果打很多字會如何
+                        測試如果打很多字會如何
+                        測試如果打很多字會如何
+                    </td>
+                    <td class="col-3">
+                        <div>
+                            <input type="checkbox">
+                            <span>記得打卡</span>
+                        </div>
+                    </td>
+                    <td class="col-3">
+                        下班前繳交報告
+                    </td>
+                    <td class="col-3">
+                        小明今日出差
+                    </td>
+                </tr>
+            </table>
+            <div class="row">
+                <table class="table table-striped " id="showWeek" style="display: none;">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th class="">
+                                8/28 六
+                            </th>
+                            <th class="">
+                                8/29 日
+                            </th>
+                            <th class="">
+                                8/30 一
+                            </th>
+                            <th class="">
+                                8/31 二
+                            </th>
+                            <th class="">
+                                9/01 三
+                            </th>
+                            <th class="">
+                                9/02 四
+                            </th>
+                            <th class="">
+                                9/03 五
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>
+                            ● 工作日誌<br>
+                            ● 代辦事項<br>
+                            ● 提醒事項<br>
+                            ● 備註<br>
+                        </td>
+                        <td>
+
+                        </td>
+
+                        <td>
+                            ● 代辦事項<br>
+                        </td>
+                        <td>
+                            ● 備註<br>
+                        </td>
+                        <td>
+                            ● 代辦事項<br>
+                            ● 提醒事項<br>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="row">
+                <table class="table table-striped" id="showMonth" style="display: none;">
+                    <!-- <thead class="thead-dark">
+                <tr>
+                    <th class="col-1">
+                        日
+                    </th>
+                    <th class="col-1">
+                        一
+                    </th>
+                    <th class="col-1">
+                        二
+                    </th>
+                    <th class="col-1">
+                        三
+                    </th>
+                    <th class="col-1">
+                        四
+                    </th>
+                    <th class="col-1">
+                        五
+                    </th>
+                    <th class="col-1">
+                        六
+                    </th>
+                </tr>
+            </thead> -->
+                </table>
+            </div>
+
+            <button class="btn float-right text-light bg-dark">新增內容</button>
+        </div>
+    </div>
+    <script src="weekmonth.js"></script>
+    <script src="timer.js" type="text/javascript"></script>
+    <div class="footer">
+        <p> Copyright © 2021 SMIT14 team3 All right reserved. </p>
+    </div>
+
+</body>
+
+</html>

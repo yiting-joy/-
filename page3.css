@@ -1,0 +1,52 @@
+
+#showMonth td {
+    height: 5rem;
+}
+
+.navbar{
+    background-color: #3b5998;
+}
+.navbar-toggler{
+    background-color: #334b80;
+}
+
+.nav-link{
+    color: #fff;
+}
+
+.nav-link:hover{
+    color: black;
+}
+
+.nav-item + nav-link{
+    color: #fff;
+}
+
+/* .btn{
+    background-color: #3b5998;color: white;
+} */
+.item{
+    color:black;
+    border-bottom:0.5px  rgb(172, 172, 172) solid;
+    border-top:0.5px  rgb(172, 172, 172) solid ;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+
+.daybar{
+    padding: 0px;
+    margin: 0px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #3b5998;
+    color: black;
+    text-align: center;
+}
+

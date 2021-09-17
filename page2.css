@@ -1,0 +1,37 @@
+
+#showMonth td {
+    height: 5rem;
+}
+
+
+.nav-link{
+    color: gray;
+}
+
+.nav-link:hover{
+    color: white;
+}
+
+
+.item{
+    background-color: rgb(87, 87, 87);color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+
+.daybar{
+    padding: 0px;
+    margin: 0px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: gray;
+    color: white;
+    text-align: center;
+}

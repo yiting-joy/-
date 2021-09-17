@@ -1,0 +1,66 @@
+
+#showMonth td {
+    height: 5rem;
+}
+
+.navbar{
+    background-color: #3b5998;
+}
+.navbar-toggler{
+    background-color: #334b80;
+}
+
+.nav-link{
+    color: #fff;
+}
+
+.nav-link:hover{
+    color: black;
+}
+
+.nav-item + nav-link{
+    color: #fff;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #3b5998;
+    color: black;
+    text-align: center;
+}
+/* 以下為新增 */
+.item{
+    margin-top: 50px;
+
+}
+
+.whenToSet{
+    border:1px rgb(189, 189, 189) solid; 
+    border-radius: 5px;
+    width: 300px;
+}
+
+.choosedate{
+    border:1px rgb(189, 189, 189) solid; 
+    border-radius: 5px;
+    width: 265px;
+}
+.choosetime{
+    border:1px rgb(189, 189, 189) solid; 
+    border-radius: 5px;
+    width: 280px;
+}
+.selectday{
+    border:1px rgb(189, 189, 189) solid; 
+    border-radius: 5px;
+    width: 300px;
+}
+.whyToSet{
+    border:1px rgb(189, 189, 189) solid; 
+    border-radius: 5px;
+    width: 300px;
+
+}

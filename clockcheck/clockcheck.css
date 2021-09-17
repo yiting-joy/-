@@ -1,0 +1,44 @@
+
+#showMonth td {
+    height: 5rem;
+}
+
+.navbar{
+    background-color: #3b5998;
+}
+.navbar-toggler{
+    background-color: #334b80;
+
+}
+
+.nav-link{
+    color: #fff;
+}
+
+.nav-link:hover{
+    color: black;
+}
+
+.nav-item + nav-link{
+    color: #fff;
+}
+
+.item{
+    border-top: none;
+    border-bottom: 0.5px gray solid;
+}
+
+
+
+/* 下方底部欄位 */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #3b5998;
+    color: black;
+    text-align: center;
+}
+
+
